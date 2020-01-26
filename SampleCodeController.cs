@@ -13,14 +13,14 @@ namespace CodeSample.Controllers
     /// This Controller contains methods that perform the following actions:
     ///     1- Return view/partial views that are used to render data.
     ///     2- Invokes the middle-tier to either get of save data.
-    ///     2- Load models with data that  will then be used by views to reneder data.
+    ///     2- Load models with data that  will then be used by views to render data.
     /// </summary>
      
     public class SampleCodeController : Controller
     {
         //This is the main method in my sample code application.
         //This method returns the main view.
-        //The main view servers as a Parent View to all partial views in this controller
+        //The main view serves as a Parent View to all partial views in this controller
         public ActionResult Index(int Param1 = 0)
         {
             //This values will be passed over to the view by use of a view bag.
