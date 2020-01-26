@@ -1,0 +1,79 @@
+﻿@model CodeSample.Models.CodeSampleEmployeeModel
+
+@*This is the Code Sample Employee PartialView.
+It renders employee details using the CodeSampleEmployeeModel.
+It will be called fron the parent view which is the index*@
+
+<div  style="width:100%;">
+
+    <table style="width:100%;">
+
+        <tr>
+
+            <th style="width:10%;">
+                @Html.DisplayNameFor(model => model.FirstName)
+
+            </th>
+            <th style="width:10%;">
+                @Html.DisplayNameFor(model => model.FirstName)
+
+            </th>
+
+            <th style="width:10%;">
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th style="width:10%;">
+                @Html.DisplayNameFor(model => model.DOB)
+            </th>
+
+            <th style="width:10%;">
+                @Html.DisplayNameFor(model => model.SSN)
+            </th>
+
+
+        </tr>
+        <tr>
+            <td>
+                @ViewBag.ShowMessage
+
+            </td>
+        </tr>
+        @foreach (var item in Model.GetCodeSampleList)
+        {
+
+            <tr>
+                <td style="height:5px"></td>
+            </tr>
+            <tr style="font-family:Arial;background-color:whitesmoke">
+
+                <td style="text-align:center;">
+
+                    @item.ID
+                </td>
+
+                <td>
+
+                    @item.FirstName
+                </td>
+
+                <td style="">
+
+                    @item.LastName
+                </td>
+
+                <td>
+
+                    @item.DOB.ToShortDateString()
+                </td>
+
+                <td style="">
+
+                    @item.SSN
+                </td>
+            </tr>
+        }
+
+
+    </table>
+
+</div>

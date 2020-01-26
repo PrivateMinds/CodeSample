@@ -1,0 +1,18 @@
+﻿@*This is the main view in my sample code application,
+Its servers as a parent view to all my partial views. 
+In this case i have only one partial view.(CodeSampleEmployeeView) which is rendered below.*@
+
+<table style="width:100%; margin:auto">
+    <tr>
+        <td style="width:100%">
+            <div>
+                @Html.Action("CodeSampleEmployeeView", "CodeSample", new { })
+
+            </div>
+        </td>
+    </tr>
+
+</table>
+
+
+
